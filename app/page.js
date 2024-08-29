@@ -98,6 +98,7 @@ const LandingPage = () => {
                     color="primary"
                     size="large"
                     sx={{ mr: 2 }}
+                    href="/chat"
                   >
                     Start Chatting
                   </Button>
