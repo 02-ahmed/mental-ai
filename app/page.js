@@ -1,95 +1,145 @@
-import Image from "next/image";
-import styles from "./page.module.css";
+"use client";
+import React from "react";
+import {
+  Container,
+  Typography,
+  Button,
+  Box,
+  AppBar,
+  Toolbar,
+  Grid,
+} from "@mui/material";
+import { ThemeProvider, createTheme } from "@mui/material/styles";
+import Image from "next/image"; // Import the Next.js Image component
 
-export default function Home() {
+const theme = createTheme({
+  palette: {
+    primary: {
+      main: "#4a90e2",
+    },
+    secondary: {
+      main: "#81c784",
+    },
+    background: {
+      default: "#f5f5f5",
+    },
+  },
+  typography: {
+    fontFamily: "Arial, sans-serif",
+  },
+});
+
+const LandingPage = () => {
   return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>app/page.js</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
+    <ThemeProvider theme={theme}>
+      <Box
+        sx={{
+          minHeight: "100vh",
+          backgroundColor: "background.default",
+          display: "flex",
+          flexDirection: "column",
+        }}
+      >
+        {/* App Control Bar */}
+        <AppBar position="static" color="primary">
+          <Toolbar>
+            <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+              MindfulAI
+            </Typography>
+            {/* <Button color="inherit">Login</Button>
+            <Button color="inherit">Sign Up</Button> */}
+          </Toolbar>
+        </AppBar>
 
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
+        {/* Main Content */}
+        <Box
+          sx={{
+            flex: 1,
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+          }}
         >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
+          <Container maxWidth="lg">
+            {" "}
+            {/* Increase container width for more space */}
+            <Grid container spacing={4} alignItems="center">
+              {/* Text Section */}
+              <Grid item xs={12} md={6}>
+                <Typography
+                  variant="h2"
+                  component="h1"
+                  gutterBottom
+                  sx={{ color: "primary.main", fontWeight: "bold" }}
+                >
+                  Welcome to MindfulAI
+                </Typography>
+                <Typography
+                  variant="h5"
+                  component="h2"
+                  gutterBottom
+                  sx={{ color: "text.secondary", mb: 4 }}
+                >
+                  Your AI-powered companion for mental health support
+                </Typography>
+                <Typography
+                  variant="body1"
+                  paragraph
+                  sx={{ color: "text.secondary" }}
+                >
+                  MindfulAI is here to listen, support, and guide you on your
+                  journey to better mental health. Our AI chatbot offers 24/7
+                  support, personalized coping strategies, and a judgment-free
+                  space to express yourself.
+                </Typography>
+                <Box sx={{ mt: 4 }}>
+                  <Button
+                    variant="contained"
+                    color="primary"
+                    size="large"
+                    sx={{ mr: 2 }}
+                  >
+                    Start Chatting
+                  </Button>
+                  <Button
+                    variant="outlined"
+                    color="secondary"
+                    size="large"
+                    href="/learnMore"
+                  >
+                    Learn More
+                  </Button>
+                </Box>
+              </Grid>
 
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore starter templates for Next.js.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
+              {/* Image Section */}
+              <Grid
+                item
+                xs={12}
+                md={6}
+                sx={{
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: "center",
+                }}
+              >
+                {/* Directly use Image without additional Box */}
+                <Image
+                  src="/mental.webp" // Replace with your actual image path
+                  alt="MindfulAI"
+                  layout="responsive"
+                  width={600} // Larger width for better space coverage
+                  height={400} // Maintain aspect ratio
+                  objectFit="cover" // Cover the grid space nicely
+                  style={{ borderRadius: "0" }} // Remove any rounded corners for blending
+                />
+              </Grid>
+            </Grid>
+          </Container>
+        </Box>
+      </Box>
+    </ThemeProvider>
   );
-}
+};
+
+export default LandingPage;
