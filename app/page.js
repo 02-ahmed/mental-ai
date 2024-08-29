@@ -10,7 +10,8 @@ import {
   Grid,
 } from "@mui/material";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
-import Image from "next/image"; // Import the Next.js Image component
+import Image from "next/image";
+import Link from "next/link"; // Import Link from Next.js
 
 const theme = createTheme({
   palette: {
@@ -46,8 +47,6 @@ const LandingPage = () => {
             <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
               MindfulAI
             </Typography>
-            {/* <Button color="inherit">Login</Button>
-            <Button color="inherit">Sign Up</Button> */}
           </Toolbar>
         </AppBar>
 
@@ -61,8 +60,6 @@ const LandingPage = () => {
           }}
         >
           <Container maxWidth="lg">
-            {" "}
-            {/* Increase container width for more space */}
             <Grid container spacing={4} alignItems="center">
               {/* Text Section */}
               <Grid item xs={12} md={6}>
@@ -107,9 +104,16 @@ const LandingPage = () => {
                     color="secondary"
                     size="large"
                     href="/learnMore"
+                    sx={{ mr: 2 }}
                   >
                     Learn More
                   </Button>
+                  {/* Add Therapy Centers Button */}
+                  <Link href="/therapy" passHref>
+                    <Button variant="outlined" color="secondary" size="large">
+                      Therapy Centers
+                    </Button>
+                  </Link>
                 </Box>
               </Grid>
 
@@ -124,15 +128,14 @@ const LandingPage = () => {
                   alignItems: "center",
                 }}
               >
-                {/* Directly use Image without additional Box */}
                 <Image
-                  src="/mental.webp" // Replace with your actual image path
+                  src="/mental.webp"
                   alt="MindfulAI"
                   layout="responsive"
-                  width={600} // Larger width for better space coverage
-                  height={400} // Maintain aspect ratio
-                  objectFit="cover" // Cover the grid space nicely
-                  style={{ borderRadius: "0" }} // Remove any rounded corners for blending
+                  width={600}
+                  height={400}
+                  objectFit="cover"
+                  style={{ borderRadius: "0" }}
                 />
               </Grid>
             </Grid>
