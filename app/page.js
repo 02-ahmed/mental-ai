@@ -110,7 +110,19 @@ const LandingPage = () => {
                   </Button>
                   {/* Add Therapy Centers Button */}
                   <Link href="/therapy" passHref>
-                    <Button variant="outlined" color="secondary" size="large">
+                    <Button
+                      variant="outlined"
+                      color="secondary"
+                      size="large"
+                      sx={{
+                        margin: {
+                          xs: "20px 0",
+                        },
+                        fontSize: {
+                          xs: "13px",
+                        },
+                      }}
+                    >
                       Therapy Centers
                     </Button>
                   </Link>
