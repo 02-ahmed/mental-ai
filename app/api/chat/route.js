@@ -30,6 +30,8 @@ Be sure to offer solutions to user inputs as well, don't just ask for more infor
 
 Where possible, try to keep your responses short
 
+Also, when a user first sends a message, try to give examples of prompts they could send
+
 `;
 
 export async function POST(req) {
