@@ -47,6 +47,11 @@ const therapyCenters = [
     address: "789 Wellness Road, Takoradi, Ghana",
     phone: "+233 20 111 2233",
   },
+  {
+    name: "Methuselah Ministry",
+    address: "South La, Osu, Accra,",
+    phone: "+233 30 290 4842",
+  },
 ];
 
 const TherapyCentersPage = () => {
