@@ -52,6 +52,11 @@ const therapyCenters = [
     address: "South La, Osu, Accra,",
     phone: "+233 30 290 4842",
   },
+  {
+    name: "Sena Pediatric Therapy",
+    address: "Plot 2103, Adjirigano, First Block Factory",
+    phone: "+233 54 747 6748",
+  },
 ];
 
 const TherapyCentersPage = () => {
