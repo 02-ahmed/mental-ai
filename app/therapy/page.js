@@ -57,6 +57,10 @@ const therapyCenters = [
     address: "Plot 2103, Adjirigano, First Block Factory, Accra",
     phone: "+233 54 747 6748",
   },
+  {
+    name: "University of Ghana Career and Counselling Centre",
+    address: "University of Ghana, Legon",
+  },
 ];
 
 const TherapyCentersPage = () => {
