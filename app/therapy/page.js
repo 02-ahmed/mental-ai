@@ -58,7 +58,7 @@ const therapyCenters = [
     phone: "+233 54 747 6748",
   },
   {
-    name: "University of Ghana Career and Counselling Centre",
+    name: "University of Ghana Career and Counselling Centre (UGCCC)",
     address: "University of Ghana, Legon",
   },
 ];
