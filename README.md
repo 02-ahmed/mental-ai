@@ -73,12 +73,24 @@ mental-ai/
 
 ## Contributing
 
-While this is a personal project and deployment access is restricted, we welcome code suggestions through issues and discussions! Here's how you can help:
+We welcome contributions! While deployment access is restricted to repository owners, you can contribute to the project following these steps:
 
-1. Open an issue to discuss proposed changes
-2. Submit bug reports or feature requests
-3. Provide code suggestions through discussions
-4. Share feedback on existing features
+1. Fork the repository
+2. Create a new branch: `git checkout -b feature/your-feature-name`
+3. Make your changes
+4. Run tests and ensure the code lints: `npm run lint`
+5. Commit your changes: `git commit -m 'Add some feature'`
+6. Push to the branch: `git push origin feature/your-feature-name`
+7. Submit a pull request
+
+You can also:
+
+- Open issues to discuss proposed changes
+- Submit bug reports or feature requests
+- Provide code suggestions through discussions
+- Share feedback on existing features
+
+Note: All pull requests will be reviewed by the repository owner before being merged and deployed.
 
 ### Development Guidelines
 
@@ -111,7 +123,7 @@ Required environment variables:
 
 ## Deployment
 
-This project is deployed on Vercel. Deployment access is restricted to repository owners only.
+This project is deployed on Vercel. While we welcome code contributions through pull requests, deployment access is restricted to repository owners only to maintain security.
 
 For repository owners:
 
@@ -124,8 +136,9 @@ For repository owners:
 
 For contributors:
 
-- The repository owner will handle all deployments
-- Changes will be reviewed and deployed by the owner
+- Submit your changes through pull requests
+- The repository owner will review, merge, and handle the deployment of approved changes
+- This ensures secure handling of environment variables and controlled deployments
 
 ## Support
 
