@@ -11,7 +11,7 @@ import {
 } from "@mui/material";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
 import Image from "next/image";
-import Link from "next/link"; // Import Link from Next.js
+import Link from "next/link";
 
 const theme = createTheme({
   palette: {
@@ -41,7 +41,6 @@ const LandingPage = () => {
           flexDirection: "column",
         }}
       >
-        {/* App Control Bar */}
         <AppBar position="static" color="primary">
           <Toolbar>
             <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
@@ -50,7 +49,6 @@ const LandingPage = () => {
           </Toolbar>
         </AppBar>
 
-        {/* Main Content */}
         <Box
           sx={{
             flex: 1,
@@ -61,7 +59,6 @@ const LandingPage = () => {
         >
           <Container maxWidth="lg">
             <Grid container spacing={4} alignItems="center">
-              {/* Text Section */}
               <Grid item xs={12} md={6}>
                 <Typography
                   variant="h2"
@@ -108,7 +105,7 @@ const LandingPage = () => {
                   >
                     Learn More
                   </Button>
-                  {/* Add Therapy Centers Button */}
+
                   <Link href="/therapy" passHref>
                     <Button
                       variant="outlined"
@@ -129,7 +126,6 @@ const LandingPage = () => {
                 </Box>
               </Grid>
 
-              {/* Image Section */}
               <Grid
                 item
                 xs={12}

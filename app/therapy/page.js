@@ -13,7 +13,6 @@ import {
 } from "@mui/material";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
 
-// Reuse the same theme as in the LandingPage
 const theme = createTheme({
   palette: {
     primary: {
@@ -74,22 +73,18 @@ const TherapyCentersPage = () => {
           flexDirection: "column",
         }}
       >
-        {/* AppBar for consistent header */}
         <AppBar position="static" color="primary">
           <Toolbar>
             <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
               MindfulAI
             </Typography>
             <Box sx={{ display: "flex", gap: 2 }}>
-              <Button
-                color="inherit"
-                href="/" // Adjust the href to point to the home page
-              >
+              <Button color="inherit" href="/">
                 Home
               </Button>
               <Button
                 color="inherit"
-                href="/chat" // Adjust the href to point to the chat page
+                href="/chat"
                 variant="outlined"
                 sx={{
                   color: "white",
@@ -106,7 +101,6 @@ const TherapyCentersPage = () => {
           </Toolbar>
         </AppBar>
 
-        {/* Main Content */}
         <Container maxWidth="md" sx={{ mt: 4, flex: 1 }}>
           <Typography
             variant="h4"

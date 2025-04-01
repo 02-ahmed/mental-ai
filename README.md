@@ -1,36 +1,159 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# MindfulAI - Mental Health Support Platform
+
+MindfulAI is an AI-powered mental health support platform that provides 24/7 support, personalized coping strategies, and a judgment-free space for users to express themselves.
+
+## Features
+
+- AI-powered chatbot for mental health support
+- Therapy center locator
+- Modern, responsive UI built with Material-UI
+- Real-time chat interface
+- Integration with Google's Generative AI
+
+## Prerequisites
+
+Before you begin, ensure you have the following installed:
+
+- Node.js (v18 or higher)
+- npm (comes with Node.js)
+- Git
 
 ## Getting Started
 
-First, run the development server:
+1. Clone the repository:
+
+```bash
+git clone https://github.com/02-ahmed/mental-ai.git
+cd mental-ai
+```
+
+2. Install dependencies:
+
+```bash
+npm install
+```
+
+3. Set up environment variables:
+   Create a `.env.local` file in the root directory with the following variables:
+
+```
+GOOGLE_API_KEY=your_api_key_here
+```
+
+⚠️ **IMPORTANT: Never commit your `.env.local` file or share your API keys!** ⚠️
+
+To get your Google API key:
+
+1. Visit the [Google AI Studio](https://makersuite.google.com/app/apikey)
+2. Sign in with your Google account
+3. Create a new API key
+4. Copy the key to your `.env.local` file
+5. Make sure `.env.local` is in your `.gitignore` file
+
+6. Run the development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+## Project Structure
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+```
+mental-ai/
+├── app/                # Next.js app directory
+│   ├── components/    # Reusable React components
+│   ├── chat/         # Chat interface
+│   ├── therapy/      # Therapy centers page
+│   └── page.js       # Landing page
+├── public/           # Static assets
+└── ...config files
+```
 
-## Learn More
+## Contributing
 
-To learn more about Next.js, take a look at the following resources:
+While this is a personal project and deployment access is restricted, we welcome code suggestions through issues and discussions! Here's how you can help:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+1. Open an issue to discuss proposed changes
+2. Submit bug reports or feature requests
+3. Provide code suggestions through discussions
+4. Share feedback on existing features
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+### Development Guidelines
 
-## Deploy on Vercel
+- Follow the existing code style and conventions
+- Write meaningful commit messages
+- Update documentation as needed
+- Test your changes thoroughly
+- Use Material-UI components for consistency
+- Follow React best practices and hooks guidelines
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Tech Stack
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- [Next.js](https://nextjs.org/) - React framework
+- [Material-UI](https://mui.com/) - UI components
+- [Google Generative AI](https://ai.google.dev/) - AI chat capabilities
+- [Vercel](https://vercel.com) - Deployment platform
+
+## Environment Variables
+
+Required environment variables:
+
+- `GOOGLE_API_KEY`: Your Google Generative AI API key
+
+⚠️ **Security Note:**
+
+- Never commit `.env.local` or any other files containing API keys
+- Keep your API keys private and secure
+- Regularly rotate your API keys
+- Use environment variables in Vercel for deployment
+
+## Deployment
+
+This project is deployed on Vercel. Deployment access is restricted to repository owners only.
+
+For repository owners:
+
+1. Connect your GitHub repository to Vercel
+2. Configure environment variables in Vercel dashboard:
+   - Go to Project Settings > Environment Variables
+   - Add your `GOOGLE_API_KEY` securely
+3. Deploy from the main branch
+4. Enable automatic deployments only for yourself
+
+For contributors:
+
+- The repository owner will handle all deployments
+- Changes will be reviewed and deployed by the owner
+
+## Support
+
+If you encounter any issues or have questions, please:
+
+1. Check existing issues
+2. Create a new issue with a detailed description
+
+## License
+
+[MIT License
+
+Copyright (c) [2025] [Techloft]
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.]
